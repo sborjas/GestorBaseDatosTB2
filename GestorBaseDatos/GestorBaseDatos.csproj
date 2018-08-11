@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorrarTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrarTabla.Designer.cs">
+      <DependentUpon>BorrarTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTablas.Designer.cs">
+      <DependentUpon>CrearTablas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +71,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BorrarTabla.resx">
+      <DependentUpon>BorrarTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearTablas.resx">
+      <DependentUpon>CrearTablas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

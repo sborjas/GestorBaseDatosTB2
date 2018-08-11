@@ -512,5 +512,43 @@ namespace GestorBaseDatos
             }
 
         }
+
+        private void cmdConsultar_Click(object sender, EventArgs e)
+        {
+            String NombreTabla = txtTableName.Text;
+            OdbcConnection con = new OdbcConnection("Driver={Adaptive Server Enterprise};server=" + "sybase-PC" + ";" + "port=" + "5000" + ";db=" + "master" + ";uid=" + "sa" + ";pwd=" + "root10" + ";");
+
+            try
+            {
+                con.Open();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+            OdbcCommand pasarInfoaGrid = new OdbcCommand(@"SELECT * FROM " + NombreTabla)
+            {
+                Connection = con
+            };
+
+            try
+            {
+                DataTable tabla = new DataTable();
+                OdbcDataAdapter pasoInfo = new OdbcDataAdapter(pasarInfoaGrid);
+                pasoInfo.Fill(tabla);
+                dgv1.DataSource = tabla;
+                txtTableName.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void borrarTabla_Click(object sender, EventArgs e)
+        {
+            BorrarTabla borrar_tabla = new BorrarTabla();
+            borrar_tabla.Show();
+        }
     }
 }

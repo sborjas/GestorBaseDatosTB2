@@ -9,3 +9,15 @@ C:\Users\sybase\Documents\TB2\GestorBaseDatos\GestorBaseDatos\obj\Debug\GestorBa
 C:\Users\sybase\Documents\TB2\GestorBaseDatos\GestorBaseDatos\obj\Debug\GestorBaseDatos.csproj.CoreCompileInputs.cache
 C:\Users\sybase\Documents\TB2\GestorBaseDatos\GestorBaseDatos\obj\Debug\GestorBaseDatos.exe
 C:\Users\sybase\Documents\TB2\GestorBaseDatos\GestorBaseDatos\obj\Debug\GestorBaseDatos.pdb
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\bin\Debug\GestorBaseDatos.exe.config
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\bin\Debug\GestorBaseDatos.exe
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\bin\Debug\GestorBaseDatos.pdb
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.csprojAssemblyReference.cache
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.Conexion.resources
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.Pantalla_Principal.resources
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.Properties.Resources.resources
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.csproj.GenerateResource.cache
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.csproj.CoreCompileInputs.cache
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.exe
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.pdb
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.BorrarTabla.resources

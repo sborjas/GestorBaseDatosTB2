@@ -111,12 +111,18 @@
             this.labelTamBD = new System.Windows.Forms.Label();
             this.labelNameBD = new System.Windows.Forms.Label();
             this.labeBD = new System.Windows.Forms.Label();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.cmdConsultar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTableName = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabTabla.SuspendLayout();
             this.TabUsuarios.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabBaseDatos.SuspendLayout();
             this.TabBD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -157,28 +163,29 @@
             // crearTabla
             // 
             this.crearTabla.Name = "crearTabla";
-            this.crearTabla.Size = new System.Drawing.Size(125, 22);
+            this.crearTabla.Size = new System.Drawing.Size(180, 22);
             this.crearTabla.Text = "Crear";
             this.crearTabla.Click += new System.EventHandler(this.crearTabla_Click);
             // 
             // listarTabla
             // 
             this.listarTabla.Name = "listarTabla";
-            this.listarTabla.Size = new System.Drawing.Size(125, 22);
+            this.listarTabla.Size = new System.Drawing.Size(180, 22);
             this.listarTabla.Text = "Listar";
             this.listarTabla.Click += new System.EventHandler(this.listarTabla_Click);
             // 
             // modificarTabla
             // 
             this.modificarTabla.Name = "modificarTabla";
-            this.modificarTabla.Size = new System.Drawing.Size(125, 22);
+            this.modificarTabla.Size = new System.Drawing.Size(180, 22);
             this.modificarTabla.Text = "Modificar";
             // 
             // borrarTabla
             // 
             this.borrarTabla.Name = "borrarTabla";
-            this.borrarTabla.Size = new System.Drawing.Size(125, 22);
+            this.borrarTabla.Size = new System.Drawing.Size(180, 22);
             this.borrarTabla.Text = "Borrar";
+            this.borrarTabla.Click += new System.EventHandler(this.borrarTabla_Click);
             // 
             // indicesToolStripMenuItem
             // 
@@ -435,6 +442,10 @@
             // 
             // tabTabla
             // 
+            this.tabTabla.Controls.Add(this.txtTableName);
+            this.tabTabla.Controls.Add(this.label10);
+            this.tabTabla.Controls.Add(this.cmdConsultar);
+            this.tabTabla.Controls.Add(this.dgv1);
             this.tabTabla.Location = new System.Drawing.Point(4, 22);
             this.tabTabla.Name = "tabTabla";
             this.tabTabla.Padding = new System.Windows.Forms.Padding(3);
@@ -871,6 +882,43 @@
             this.labeBD.TabIndex = 0;
             this.labeBD.Text = "Crear Base de Datos";
             // 
+            // dgv1
+            // 
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(19, 120);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(556, 233);
+            this.dgv1.TabIndex = 0;
+            // 
+            // cmdConsultar
+            // 
+            this.cmdConsultar.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsultar.Location = new System.Drawing.Point(36, 79);
+            this.cmdConsultar.Name = "cmdConsultar";
+            this.cmdConsultar.Size = new System.Drawing.Size(161, 38);
+            this.cmdConsultar.TabIndex = 1;
+            this.cmdConsultar.Text = "Realizar Consulta";
+            this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(32, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(491, 23);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Ingrese el Nombre de la Tabla que desea ver su informacion:";
+            // 
+            // txtTableName
+            // 
+            this.txtTableName.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTableName.Location = new System.Drawing.Point(36, 41);
+            this.txtTableName.Name = "txtTableName";
+            this.txtTableName.Size = new System.Drawing.Size(487, 31);
+            this.txtTableName.TabIndex = 3;
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -887,12 +935,15 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabTabla.ResumeLayout(false);
+            this.tabTabla.PerformLayout();
             this.TabUsuarios.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabBaseDatos.ResumeLayout(false);
             this.TabBD.ResumeLayout(false);
             this.TabBD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,5 +1034,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTableName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button cmdConsultar;
+        private System.Windows.Forms.DataGridView dgv1;
     }
 }

@@ -394,7 +394,7 @@ namespace GestorBaseDatos
 
         private void cmdCreateUser_Click(object sender, EventArgs e)
         {
-            String newUser = txtNomBorrarBD.Text;
+            String newUser = txtNewUser.Text;
             String newPass = txtNewPasUser.Text;
             OdbcConnection con = new OdbcConnection("Driver={Adaptive Server Enterprise};server=" + "sybase-PC" + ";" + "port=" + "5000" + ";db=" + "master" + ";uid=" + "sa" + ";pwd=" + "root10" + ";");
 
@@ -455,6 +455,10 @@ namespace GestorBaseDatos
             {
                 MessageBox.Show(exp.Message);
             }
+            OdbcCommand delete1 = new OdbcCommand(@"sp_droplogin " + userDel) //BORRAR USUARIO
+            {
+                Connection = con
+            };
             OdbcCommand delete = new OdbcCommand(@"sp_dropuser "+userDel) //BORRAR USUARIO
             {
                 Connection = con

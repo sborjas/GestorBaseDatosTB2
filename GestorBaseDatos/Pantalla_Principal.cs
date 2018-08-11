@@ -30,7 +30,8 @@ namespace GestorBaseDatos
 
         private void crearTabla_Click(object sender, EventArgs e)
         {
-
+            CrearTablas crear_tabla = new CrearTablas();
+            crear_tabla.Show();
         }
 
         private void listarTabla_Click(object sender, EventArgs e)
@@ -513,6 +514,9 @@ namespace GestorBaseDatos
 
         }
 
+        OdbcDataAdapter adapter;
+        DataSet ds;
+
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
             String NombreTabla = txtTableName.Text;
@@ -526,18 +530,19 @@ namespace GestorBaseDatos
             {
                 MessageBox.Show(exp.Message);
             }
-            OdbcCommand pasarInfoaGrid = new OdbcCommand(@"SELECT * FROM " + NombreTabla)
-            {
-                Connection = con
-            };
 
             try
             {
+                /*
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter pasoInfo = new OdbcDataAdapter(pasarInfoaGrid);
                 pasoInfo.Fill(tabla);
                 dgv1.DataSource = tabla;
-                txtTableName.Text = "";
+                */
+                adapter = new OdbcDataAdapter("SELECT * FROM " + NombreTabla, con);
+                ds = new System.Data.DataSet();
+                adapter.Fill(ds, NombreTabla);
+                dgv1.DataSource = ds.Tables[0];
             }
             catch (Exception ex)
             {
@@ -549,6 +554,27 @@ namespace GestorBaseDatos
         {
             BorrarTabla borrar_tabla = new BorrarTabla();
             borrar_tabla.Show();
+        }
+
+        private void cmdCommit_Click(object sender, EventArgs e)
+        {
+            OdbcCommandBuilder cmbuild;
+            String NombreTabla = txtTableName.Text;
+            OdbcConnection con = new OdbcConnection("Driver={Adaptive Server Enterprise};server=" + "sybase-PC" + ";" + "port=" + "5000" + ";db=" + "master" + ";uid=" + "sa" + ";pwd=" + "root10" + ";");
+
+            try
+            {
+                con.Open();
+                cmbuild = new OdbcCommandBuilder(adapter);
+                adapter.Update(ds, NombreTabla);
+                MessageBox.Show("Informacion Actualizada", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+            
         }
     }
 }

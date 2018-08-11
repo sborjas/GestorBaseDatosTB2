@@ -61,6 +61,7 @@
             this.cmdCrearTabla.TabIndex = 1;
             this.cmdCrearTabla.Text = "Crear Tabla";
             this.cmdCrearTabla.UseVisualStyleBackColor = true;
+            this.cmdCrearTabla.Click += new System.EventHandler(this.cmdCrearTabla_Click);
             // 
             // label2
             // 

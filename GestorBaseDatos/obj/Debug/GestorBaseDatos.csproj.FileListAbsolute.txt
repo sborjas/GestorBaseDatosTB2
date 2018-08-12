@@ -22,3 +22,4 @@ C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj
 C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.pdb
 C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.BorrarTabla.resources
 C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.CrearTablas.resources
+C:\Users\sybase\Documents\GESTORBASEDATOS\GestorBaseDatosTB2\GestorBaseDatos\obj\Debug\GestorBaseDatos.verVista.resources

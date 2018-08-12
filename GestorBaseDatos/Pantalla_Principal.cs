@@ -580,5 +580,92 @@ namespace GestorBaseDatos
             }
             
         }
+
+        private void cmdCrearVista_Click(object sender, EventArgs e)
+        {           
+            String NombreVista = txtNombreVista.Text;
+            String NombreTabla = txtNombreTabla.Text;
+            String condicion = txtCondicion.Text;
+
+            OdbcConnection con = new OdbcConnection("Driver={Adaptive Server Enterprise};server=" + "sybase-PC" + ";" + "port=" + "5000" + ";db=" + "master" + ";uid=" + "sa" + ";pwd=" + "root10" + ";");
+
+            try
+            {
+                con.Open();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+            OdbcCommand crearVista = new OdbcCommand(@"CREATE VIEW "+NombreVista+
+                                                            "AS SELECT *"+
+                                                            "FROM "+NombreTabla+ 
+                                                            "WHERE "+condicion) //AGREGAR VISTA
+            {
+                Connection = con
+            };
+
+            try
+            {
+                OdbcDataReader lectura = crearVista.ExecuteReader();
+                lectura.Read();
+
+                MessageBox.Show("VISTA CREADA");
+                txtNombreVista.Text = "";
+                txtNombreTabla.Text = "";
+                txtCondicion.Text = "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmdBorrarVista_Click(object sender, EventArgs e)
+        {         
+            String nombreVista = txtVistaDel.Text;
+
+            OdbcConnection con = new OdbcConnection("Driver={Adaptive Server Enterprise};server=" + "sybase-PC" + ";" + "port=" + "5000" + ";db=" + "master" + ";uid=" + "sa" + ";pwd=" + "root10" + ";");
+
+            try
+            {
+                con.Open();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+            OdbcCommand borrarVista = new OdbcCommand(@"drop view "+nombreVista) //ELIMINAR VISTA
+            {
+                Connection = con
+            };
+
+            try
+            {
+                OdbcDataReader lectura = borrarVista.ExecuteReader();
+                lectura.Read();
+
+                MessageBox.Show("VISTA ELIMINADA");
+                txtVistaDel.Text = "";               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void visualizarVista_Click(object sender, EventArgs e)
+        {
+            verVista verVista = new verVista();
+            verVista.Show();
+
+        }
+
+        private void borrarVista_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

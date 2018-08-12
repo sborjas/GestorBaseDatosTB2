@@ -69,6 +69,7 @@
             this.Titulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTabla = new System.Windows.Forms.TabPage();
+            this.cmdCommit = new System.Windows.Forms.Button();
             this.txtTableName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmdConsultar = new System.Windows.Forms.Button();
@@ -115,13 +116,34 @@
             this.labelTamBD = new System.Windows.Forms.Label();
             this.labelNameBD = new System.Windows.Forms.Label();
             this.labeBD = new System.Windows.Forms.Label();
-            this.cmdCommit = new System.Windows.Forms.Button();
+            this.cmdCrearVista = new System.Windows.Forms.Button();
+            this.txtNombreTabla = new System.Windows.Forms.TextBox();
+            this.txtNombreVista = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmdBorrarVista = new System.Windows.Forms.Button();
+            this.txtVistaDel = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtNewCond = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmdActualizarVista = new System.Windows.Forms.Button();
+            this.txtVistaNameMod = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtTablaMod = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtCondicion = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.visualizarVista = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabTabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.TabUsuarios.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.TabVistas.SuspendLayout();
             this.tabBaseDatos.SuspendLayout();
             this.TabBD.SuspendLayout();
             this.SuspendLayout();
@@ -164,27 +186,27 @@
             // crearTabla
             // 
             this.crearTabla.Name = "crearTabla";
-            this.crearTabla.Size = new System.Drawing.Size(180, 22);
+            this.crearTabla.Size = new System.Drawing.Size(125, 22);
             this.crearTabla.Text = "Crear";
             this.crearTabla.Click += new System.EventHandler(this.crearTabla_Click);
             // 
             // listarTabla
             // 
             this.listarTabla.Name = "listarTabla";
-            this.listarTabla.Size = new System.Drawing.Size(180, 22);
+            this.listarTabla.Size = new System.Drawing.Size(125, 22);
             this.listarTabla.Text = "Listar";
             this.listarTabla.Click += new System.EventHandler(this.listarTabla_Click);
             // 
             // modificarTabla
             // 
             this.modificarTabla.Name = "modificarTabla";
-            this.modificarTabla.Size = new System.Drawing.Size(180, 22);
+            this.modificarTabla.Size = new System.Drawing.Size(125, 22);
             this.modificarTabla.Text = "Modificar";
             // 
             // borrarTabla
             // 
             this.borrarTabla.Name = "borrarTabla";
-            this.borrarTabla.Size = new System.Drawing.Size(180, 22);
+            this.borrarTabla.Size = new System.Drawing.Size(125, 22);
             this.borrarTabla.Text = "Borrar";
             this.borrarTabla.Click += new System.EventHandler(this.borrarTabla_Click);
             // 
@@ -237,26 +259,26 @@
             // crearPA
             // 
             this.crearPA.Name = "crearPA";
-            this.crearPA.Size = new System.Drawing.Size(125, 22);
+            this.crearPA.Size = new System.Drawing.Size(180, 22);
             this.crearPA.Text = "Crear";
             // 
             // listarPA
             // 
             this.listarPA.Name = "listarPA";
-            this.listarPA.Size = new System.Drawing.Size(125, 22);
+            this.listarPA.Size = new System.Drawing.Size(180, 22);
             this.listarPA.Text = "Listar";
             this.listarPA.Click += new System.EventHandler(this.listarPA_Click);
             // 
             // modificarPA
             // 
             this.modificarPA.Name = "modificarPA";
-            this.modificarPA.Size = new System.Drawing.Size(125, 22);
+            this.modificarPA.Size = new System.Drawing.Size(180, 22);
             this.modificarPA.Text = "Modificar";
             // 
             // borrarPA
             // 
             this.borrarPA.Name = "borrarPA";
-            this.borrarPA.Size = new System.Drawing.Size(125, 22);
+            this.borrarPA.Size = new System.Drawing.Size(180, 22);
             this.borrarPA.Text = "Borrar";
             // 
             // triggersToolStripMenuItem
@@ -340,7 +362,8 @@
             this.crearVista,
             this.listarVista,
             this.modificarVista,
-            this.borrarVista});
+            this.borrarVista,
+            this.visualizarVista});
             this.vistasToolStripMenuItem.Name = "vistasToolStripMenuItem";
             this.vistasToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.vistasToolStripMenuItem.Text = "Vistas";
@@ -348,27 +371,28 @@
             // crearVista
             // 
             this.crearVista.Name = "crearVista";
-            this.crearVista.Size = new System.Drawing.Size(125, 22);
+            this.crearVista.Size = new System.Drawing.Size(180, 22);
             this.crearVista.Text = "Crear";
             // 
             // listarVista
             // 
             this.listarVista.Name = "listarVista";
-            this.listarVista.Size = new System.Drawing.Size(125, 22);
+            this.listarVista.Size = new System.Drawing.Size(180, 22);
             this.listarVista.Text = "Listar";
             this.listarVista.Click += new System.EventHandler(this.listarVista_Click);
             // 
             // modificarVista
             // 
             this.modificarVista.Name = "modificarVista";
-            this.modificarVista.Size = new System.Drawing.Size(125, 22);
+            this.modificarVista.Size = new System.Drawing.Size(180, 22);
             this.modificarVista.Text = "Modificar";
             // 
             // borrarVista
             // 
             this.borrarVista.Name = "borrarVista";
-            this.borrarVista.Size = new System.Drawing.Size(125, 22);
+            this.borrarVista.Size = new System.Drawing.Size(180, 22);
             this.borrarVista.Text = "Borrar";
+            this.borrarVista.Click += new System.EventHandler(this.borrarVista_Click);
             // 
             // baseDeDatosToolStripMenuItem
             // 
@@ -455,6 +479,17 @@
             this.tabTabla.TabIndex = 1;
             this.tabTabla.Text = "Tablas";
             this.tabTabla.UseVisualStyleBackColor = true;
+            // 
+            // cmdCommit
+            // 
+            this.cmdCommit.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCommit.Location = new System.Drawing.Point(399, 324);
+            this.cmdCommit.Name = "cmdCommit";
+            this.cmdCommit.Size = new System.Drawing.Size(176, 36);
+            this.cmdCommit.TabIndex = 4;
+            this.cmdCommit.Text = "Commit to DB";
+            this.cmdCommit.UseVisualStyleBackColor = true;
+            this.cmdCommit.Click += new System.EventHandler(this.cmdCommit_Click);
             // 
             // txtTableName
             // 
@@ -730,6 +765,26 @@
             // 
             // TabVistas
             // 
+            this.TabVistas.Controls.Add(this.txtCondicion);
+            this.TabVistas.Controls.Add(this.label20);
+            this.TabVistas.Controls.Add(this.txtNewCond);
+            this.TabVistas.Controls.Add(this.label16);
+            this.TabVistas.Controls.Add(this.cmdActualizarVista);
+            this.TabVistas.Controls.Add(this.txtVistaNameMod);
+            this.TabVistas.Controls.Add(this.label17);
+            this.TabVistas.Controls.Add(this.txtTablaMod);
+            this.TabVistas.Controls.Add(this.label18);
+            this.TabVistas.Controls.Add(this.label19);
+            this.TabVistas.Controls.Add(this.cmdBorrarVista);
+            this.TabVistas.Controls.Add(this.txtVistaDel);
+            this.TabVistas.Controls.Add(this.label14);
+            this.TabVistas.Controls.Add(this.label15);
+            this.TabVistas.Controls.Add(this.cmdCrearVista);
+            this.TabVistas.Controls.Add(this.txtNombreTabla);
+            this.TabVistas.Controls.Add(this.txtNombreVista);
+            this.TabVistas.Controls.Add(this.label11);
+            this.TabVistas.Controls.Add(this.label12);
+            this.TabVistas.Controls.Add(this.label13);
             this.TabVistas.Location = new System.Drawing.Point(4, 22);
             this.TabVistas.Name = "TabVistas";
             this.TabVistas.Size = new System.Drawing.Size(595, 379);
@@ -921,16 +976,202 @@
             this.labeBD.TabIndex = 0;
             this.labeBD.Text = "Crear Base de Datos";
             // 
-            // cmdCommit
+            // cmdCrearVista
             // 
-            this.cmdCommit.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCommit.Location = new System.Drawing.Point(399, 324);
-            this.cmdCommit.Name = "cmdCommit";
-            this.cmdCommit.Size = new System.Drawing.Size(176, 36);
-            this.cmdCommit.TabIndex = 4;
-            this.cmdCommit.Text = "Commit to DB";
-            this.cmdCommit.UseVisualStyleBackColor = true;
-            this.cmdCommit.Click += new System.EventHandler(this.cmdCommit_Click);
+            this.cmdCrearVista.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCrearVista.Location = new System.Drawing.Point(24, 212);
+            this.cmdCrearVista.Name = "cmdCrearVista";
+            this.cmdCrearVista.Size = new System.Drawing.Size(172, 33);
+            this.cmdCrearVista.TabIndex = 11;
+            this.cmdCrearVista.Text = "Crear Vista";
+            this.cmdCrearVista.UseVisualStyleBackColor = true;
+            this.cmdCrearVista.Click += new System.EventHandler(this.cmdCrearVista_Click);
+            // 
+            // txtNombreTabla
+            // 
+            this.txtNombreTabla.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreTabla.Location = new System.Drawing.Point(27, 128);
+            this.txtNombreTabla.Name = "txtNombreTabla";
+            this.txtNombreTabla.PasswordChar = '*';
+            this.txtNombreTabla.Size = new System.Drawing.Size(100, 27);
+            this.txtNombreTabla.TabIndex = 10;
+            // 
+            // txtNombreVista
+            // 
+            this.txtNombreVista.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreVista.Location = new System.Drawing.Point(27, 74);
+            this.txtNombreVista.Name = "txtNombreVista";
+            this.txtNombreVista.Size = new System.Drawing.Size(100, 27);
+            this.txtNombreVista.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(20, 102);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 23);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Nombre Tabla:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(23, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(126, 23);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Nombre Vista:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(21, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 26);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Crear Vista";
+            // 
+            // cmdBorrarVista
+            // 
+            this.cmdBorrarVista.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBorrarVista.Location = new System.Drawing.Point(234, 331);
+            this.cmdBorrarVista.Name = "cmdBorrarVista";
+            this.cmdBorrarVista.Size = new System.Drawing.Size(114, 27);
+            this.cmdBorrarVista.TabIndex = 15;
+            this.cmdBorrarVista.Text = "Borrar Vista";
+            this.cmdBorrarVista.UseVisualStyleBackColor = true;
+            this.cmdBorrarVista.Click += new System.EventHandler(this.cmdBorrarVista_Click);
+            // 
+            // txtVistaDel
+            // 
+            this.txtVistaDel.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVistaDel.Location = new System.Drawing.Point(28, 331);
+            this.txtVistaDel.Name = "txtVistaDel";
+            this.txtVistaDel.Size = new System.Drawing.Size(200, 27);
+            this.txtVistaDel.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 305);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(206, 23);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Ingrese nombre de Vista";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(22, 279);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(116, 26);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Borrar Vista";
+            // 
+            // txtNewCond
+            // 
+            this.txtNewCond.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewCond.Location = new System.Drawing.Point(278, 187);
+            this.txtNewCond.Name = "txtNewCond";
+            this.txtNewCond.Size = new System.Drawing.Size(100, 27);
+            this.txtNewCond.TabIndex = 27;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(274, 161);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 23);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Nueva Condicion";
+            // 
+            // cmdActualizarVista
+            // 
+            this.cmdActualizarVista.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdActualizarVista.Location = new System.Drawing.Point(278, 220);
+            this.cmdActualizarVista.Name = "cmdActualizarVista";
+            this.cmdActualizarVista.Size = new System.Drawing.Size(172, 33);
+            this.cmdActualizarVista.TabIndex = 25;
+            this.cmdActualizarVista.Text = "Actualizar Vista";
+            this.cmdActualizarVista.UseVisualStyleBackColor = true;
+            // 
+            // txtVistaNameMod
+            // 
+            this.txtVistaNameMod.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVistaNameMod.Location = new System.Drawing.Point(278, 83);
+            this.txtVistaNameMod.Name = "txtVistaNameMod";
+            this.txtVistaNameMod.Size = new System.Drawing.Size(100, 27);
+            this.txtVistaNameMod.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(274, 56);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(206, 23);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Ingrese nombre de Vista";
+            // 
+            // txtTablaMod
+            // 
+            this.txtTablaMod.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTablaMod.Location = new System.Drawing.Point(278, 131);
+            this.txtTablaMod.Name = "txtTablaMod";
+            this.txtTablaMod.Size = new System.Drawing.Size(100, 27);
+            this.txtTablaMod.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(274, 108);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(124, 23);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Nombre Tabla";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(273, 21);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(145, 26);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Modificar Vista";
+            // 
+            // txtCondicion
+            // 
+            this.txtCondicion.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCondicion.Location = new System.Drawing.Point(27, 184);
+            this.txtCondicion.Name = "txtCondicion";
+            this.txtCondicion.PasswordChar = '*';
+            this.txtCondicion.Size = new System.Drawing.Size(100, 27);
+            this.txtCondicion.TabIndex = 29;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(23, 158);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 23);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Condicion: ";
+            // 
+            // visualizarVista
+            // 
+            this.visualizarVista.Name = "visualizarVista";
+            this.visualizarVista.Size = new System.Drawing.Size(180, 22);
+            this.visualizarVista.Text = "Visualizar Vista";
+            this.visualizarVista.Click += new System.EventHandler(this.visualizarVista_Click);
             // 
             // Pantalla_Principal
             // 
@@ -954,6 +1195,8 @@
             this.TabUsuarios.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.TabVistas.ResumeLayout(false);
+            this.TabVistas.PerformLayout();
             this.tabBaseDatos.ResumeLayout(false);
             this.TabBD.ResumeLayout(false);
             this.TabBD.PerformLayout();
@@ -1052,5 +1295,26 @@
         private System.Windows.Forms.Button cmdConsultar;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button cmdCommit;
+        private System.Windows.Forms.TextBox txtCondicion;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtNewCond;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button cmdActualizarVista;
+        private System.Windows.Forms.TextBox txtVistaNameMod;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtTablaMod;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button cmdBorrarVista;
+        private System.Windows.Forms.TextBox txtVistaDel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button cmdCrearVista;
+        private System.Windows.Forms.TextBox txtNombreTabla;
+        private System.Windows.Forms.TextBox txtNombreVista;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolStripMenuItem visualizarVista;
     }
 }

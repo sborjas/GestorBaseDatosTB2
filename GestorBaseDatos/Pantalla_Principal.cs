@@ -600,7 +600,7 @@ namespace GestorBaseDatos
             OdbcCommand crearVista = new OdbcCommand(@"CREATE VIEW "+NombreVista+
                                                             "AS SELECT *"+
                                                             "FROM "+NombreTabla+ 
-                                                            "WHERE "+condicion) //AGREGAR VISTA
+                                                            " WHERE "+condicion) //AGREGAR VISTA
             {
                 Connection = con
             };
@@ -664,6 +664,11 @@ namespace GestorBaseDatos
         }
 
         private void borrarVista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdCrearBD_Click_1(object sender, EventArgs e)
         {
 
         }

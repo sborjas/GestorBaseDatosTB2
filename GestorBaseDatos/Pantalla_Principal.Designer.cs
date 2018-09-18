@@ -459,7 +459,7 @@
             this.tabControl1.Controls.Add(this.TabUsuarios);
             this.tabControl1.Controls.Add(this.TabVistas);
             this.tabControl1.Controls.Add(this.tabBaseDatos);
-            this.tabControl1.Location = new System.Drawing.Point(185, 57);
+            this.tabControl1.Location = new System.Drawing.Point(197, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(603, 405);
@@ -929,6 +929,7 @@
             this.cmdCrearBD.TabIndex = 5;
             this.cmdCrearBD.Text = "Crear Base de Datos";
             this.cmdCrearBD.UseVisualStyleBackColor = true;
+            this.cmdCrearBD.Click += new System.EventHandler(this.cmdCrearBD_Click_1);
             // 
             // txtDBSize
             // 
@@ -992,7 +993,6 @@
             this.txtNombreTabla.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreTabla.Location = new System.Drawing.Point(27, 128);
             this.txtNombreTabla.Name = "txtNombreTabla";
-            this.txtNombreTabla.PasswordChar = '*';
             this.txtNombreTabla.Size = new System.Drawing.Size(100, 27);
             this.txtNombreTabla.TabIndex = 10;
             // 
@@ -1152,7 +1152,6 @@
             this.txtCondicion.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCondicion.Location = new System.Drawing.Point(27, 184);
             this.txtCondicion.Name = "txtCondicion";
-            this.txtCondicion.PasswordChar = '*';
             this.txtCondicion.Size = new System.Drawing.Size(100, 27);
             this.txtCondicion.TabIndex = 29;
             // 
